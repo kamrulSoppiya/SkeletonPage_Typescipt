@@ -4,9 +4,12 @@ import { MobileSkeleton } from './features/mobileskeleton';
 export default function App(){
   return(
     <div>
-      <MobileSkeleton skeletonRows={[80, 30,50,10,20,60]} />
-      <SmallSkeleton skeletonRows={3}/>
-      <SkeletonLoader skeletonRows={[6,5,3]}/>
+      {/* skeletonRows - MobileSkeleton props taken (height,width) of per skeleton rows */}
+      <MobileSkeleton skeletonRows={[80, 30,100]} />
+      {/* skeletonRows - Total element of rows */}
+      <SmallSkeleton skeletonRows={3}/> 
+      {/* skeletonRows -Total rows is length of array and array index is rows of per block */}
+      <SkeletonLoader skeletonRows={[10,6,7]}/>
     </div>
   );
 }
